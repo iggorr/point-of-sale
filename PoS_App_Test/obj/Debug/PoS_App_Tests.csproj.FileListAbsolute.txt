@@ -1,0 +1,15 @@
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40125689\My Profile\Desktop\Coursework2_40125689\PoS_App_Test\obj\Debug\PoS_App_Tests.csprojResolveAssemblyReference.cache
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40125689\My Profile\Desktop\Coursework2_40125689\PoS_App_Test\bin\Debug\PoS_App_Test.dll
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40125689\My Profile\Desktop\Coursework2_40125689\PoS_App_Test\bin\Debug\PoS_App_Test.pdb
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40125689\My Profile\Desktop\Coursework2_40125689\PoS_App_Test\bin\Debug\cw2_40125689.exe
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40125689\My Profile\Desktop\Coursework2_40125689\PoS_App_Test\bin\Debug\cw2_40125689.pdb
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40125689\My Profile\Desktop\Coursework2_40125689\PoS_App_Test\obj\Debug\PoS_App_Test.dll
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40125689\My Profile\Desktop\Coursework2_40125689\PoS_App_Test\obj\Debug\PoS_App_Test.pdb
+D:\My Documents\Игорь\Documets\Software Development 2 2015\Repositories\assessment2\Coursework2_40125689\PoS_App_Test\bin\Debug\PoS_App_Test.dll
+D:\My Documents\Игорь\Documets\Software Development 2 2015\Repositories\assessment2\Coursework2_40125689\PoS_App_Test\bin\Debug\PoS_App_Test.pdb
+D:\My Documents\Игорь\Documets\Software Development 2 2015\Repositories\assessment2\Coursework2_40125689\PoS_App_Test\bin\Debug\cw2_40125689.exe
+D:\My Documents\Игорь\Documets\Software Development 2 2015\Repositories\assessment2\Coursework2_40125689\PoS_App_Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\My Documents\Игорь\Documets\Software Development 2 2015\Repositories\assessment2\Coursework2_40125689\PoS_App_Test\bin\Debug\cw2_40125689.pdb
+D:\My Documents\Игорь\Documets\Software Development 2 2015\Repositories\assessment2\Coursework2_40125689\PoS_App_Test\obj\Debug\PoS_App_Tests.csprojResolveAssemblyReference.cache
+D:\My Documents\Игорь\Documets\Software Development 2 2015\Repositories\assessment2\Coursework2_40125689\PoS_App_Test\obj\Debug\PoS_App_Test.dll
+D:\My Documents\Игорь\Documets\Software Development 2 2015\Repositories\assessment2\Coursework2_40125689\PoS_App_Test\obj\Debug\PoS_App_Test.pdb

@@ -1,0 +1,41 @@
+﻿<Window x:Class="cw2_40125689.OrdersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Orders" Height="300" Width="300">
+    <Grid>
+        <Label x:Name="lblOrderType" Content="Order Type:" HorizontalAlignment="Left" Margin="25,23,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rdbSitIn" Content="Sit-in" HorizontalAlignment="Left" Margin="113,28,0,0" VerticalAlignment="Top" Checked="rdbSitIn_Checked" Unchecked="rdbSitIn_Unchecked"/>
+        <RadioButton x:Name="rdbDelivery" Content="Delivery" HorizontalAlignment="Left" Margin="185,28,0,0" VerticalAlignment="Top" Checked="rdbDelivery_Checked" Unchecked="rdbDelivery_Unchecked"/>
+        <ListBox x:Name="lbxSitInOrders" HorizontalAlignment="Left" Height="100" Margin="25,86,0,0" VerticalAlignment="Top" Width="100" 
+        	ItemsSource="{Binding SitIns}" Visibility="Hidden">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding OrderNumber}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label x:Name="lblSitInOrders" Content="Sit-in Orders" HorizontalAlignment="Left" Margin="25,60,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="lblTable" Content="Table:" HorizontalAlignment="Left" Margin="157,121,0,0" VerticalAlignment="Top" Visibility="Hidden" FontWeight="Bold"/>
+        <Label x:Name="lblTableValue" Content="{Binding ElementName=lbxSitInOrders, Path=SelectedItem.Table}" HorizontalAlignment="Left" Margin="157,147,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="lblServer" Content="Server:" HorizontalAlignment="Left" Margin="157,60,0,0" VerticalAlignment="Top" FontWeight="Bold" Visibility="Hidden"/>
+        <Label x:Name="lblSitInServer" Content="{Binding ElementName=lbxSitInOrders, Path=SelectedItem.TakenBy.Name}" HorizontalAlignment="Left" Margin="157,86,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="lblTotal" Content="Amount Paid:" HorizontalAlignment="Left" Margin="157,192,0,0" VerticalAlignment="Top" FontWeight="Bold" Visibility="Hidden"/>
+        <Label x:Name="lblSitInTotal" Content="{Binding ElementName=lbxSitInOrders, Path=SelectedItem.AmountPaid}" HorizontalAlignment="Left" Margin="157,218,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <ListBox x:Name="lbxDeliveryOrders" HorizontalAlignment="Left" Height="100" Margin="25,86,0,0" VerticalAlignment="Top" Width="100" 
+        	ItemsSource="{Binding Deliveries}" Visibility="Hidden">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding OrderNumber}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label x:Name="lblDeliveryOrders" Content="Delivery Orders" HorizontalAlignment="Left" Margin="25,60,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="lblDriver" Content="Driver:" HorizontalAlignment="Left" Margin="157,103,0,0" VerticalAlignment="Top" FontWeight="Bold" Visibility="Hidden"/>
+        <Label x:Name="lblDriverValue" Content="{Binding SelectedItem.DeliveredBy.Name, ElementName=lbxDeliveryOrders}" HorizontalAlignment="Left" Margin="157,119,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDeliveryServer" Content="{Binding SelectedItem.TakenBy.Name, ElementName=lbxDeliveryOrders}" HorizontalAlignment="Left" Margin="157,76,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDeliveryTotal" Content="{Binding SelectedItem.AmountPaid, ElementName=lbxDeliveryOrders}" HorizontalAlignment="Left" Margin="157,208,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCustomerName" Content="Customer Name:" HorizontalAlignment="Left" Margin="157,146,0,0" VerticalAlignment="Top" FontWeight="Bold" Visibility="Hidden"/>
+        <Label x:Name="lblCustomerNameValue" Content="{Binding SelectedItem.CustomerName, ElementName=lbxDeliveryOrders}" HorizontalAlignment="Left" Margin="157,162,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

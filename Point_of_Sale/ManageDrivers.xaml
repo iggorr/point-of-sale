@@ -1,0 +1,33 @@
+﻿<Window x:Class="cw2_40125689.ManageDrivers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Manage Drivers" Height="353.333" Width="532.333">
+    <Grid>
+        <ListBox x:Name="lbxDrivers" HorizontalAlignment="Left" Height="100" Margin="30,55,0,0" VerticalAlignment="Top" Width="100" 
+         ItemsSource="{Binding Path=Drivers}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"></TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="btnAddDriver" Content="Add" HorizontalAlignment="Left" Margin="322,217,0,0" VerticalAlignment="Top" Width="75" Click="btnAddDriver_Click" />
+        <Button x:Name="btnAmendDriver" Content="Amend" HorizontalAlignment="Left" Margin="160,217,0,0" VerticalAlignment="Top" Width="75" Click="btnAmendDriver_Click"/>
+        <Button x:Name="btnRemoveDriver" Content="Remove" HorizontalAlignment="Left" Margin="30,217,0,0" VerticalAlignment="Top" Width="75" Click="btnRemoveDriver_Click"/>
+        <Label x:Name="lblDrivers" Content="Drivers" HorizontalAlignment="Left" Margin="30,29,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" Margin="160,90,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="160,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding ElementName=lbxDrivers, Path=SelectedItem.Name, Mode=OneWay}"/>
+        <Label x:Name="lblStaffId" Content="Staff ID" HorizontalAlignment="Left" Margin="160,29,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtStaffId" HorizontalAlignment="Left" Height="23" Margin="160,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding ElementName=lbxDrivers, Path=SelectedItem.StaffId, Mode=OneWay}"/>
+        <Label x:Name="lblCarReg" Content="Car Registration" HorizontalAlignment="Left" Margin="160,151,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCarReg" HorizontalAlignment="Left" Height="23" Margin="160,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding SelectedItem.CarReg, ElementName=lbxDrivers, Mode=OneWay}"/>
+        <Label x:Name="lblNewName" Content="Name" HorizontalAlignment="Left" Margin="322,90,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNewName" HorizontalAlignment="Left" Height="23" Margin="322,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="lblNewStaffId" Content="Staff ID" HorizontalAlignment="Left" Margin="322,29,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNewStaffId" HorizontalAlignment="Left" Height="23" Margin="322,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="lblNewCarReg" Content="Car Registration" HorizontalAlignment="Left" Margin="322,151,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNewCarReg" HorizontalAlignment="Left" Height="23" Margin="322,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="lblAdd" Content="Add New Driver" HorizontalAlignment="Left" Margin="322,3,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lblExisting" Content="Existing Staff" HorizontalAlignment="Left" Margin="30,3,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="cw2_40125689.ManageDishes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Manage Menu Items" Height="353.333" Width="562.333">
+    <Grid>
+        <ListBox x:Name="lbxDishes" HorizontalAlignment="Left" Height="100" Margin="30,55,0,0" VerticalAlignment="Top" Width="130" 
+         ItemsSource="{Binding Path=Dishes}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Description}"></TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="btnAddDish" Content="Add" HorizontalAlignment="Left" Margin="352,191,0,0" VerticalAlignment="Top" Width="75" Click="btnAddDish_Click"/>
+        <Button x:Name="btnAmendDish" Content="Amend" HorizontalAlignment="Left" Margin="190,191,0,0" VerticalAlignment="Top" Width="75" Click="btnAmendDish_Click"/>
+        <Button x:Name="btnRemoveDish" Content="Remove" HorizontalAlignment="Left" Margin="30,191,0,0" VerticalAlignment="Top" Width="75" Click="btnRemoveDish_Click"/>
+        <Label x:Name="lblDishes" Content="Menu Items" HorizontalAlignment="Left" Margin="30,29,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDescription" Content="Description" HorizontalAlignment="Left" Margin="190,29,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDescription" HorizontalAlignment="Left" Height="23" Margin="190,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding ElementName=lbxDishes, Path=SelectedItem.Description, Mode=OneWay}"/>
+        <Label x:Name="lblPrice" Content="Price, (pence)" HorizontalAlignment="Left" Margin="190,90,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Height="23" Margin="190,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding ElementName=lbxDishes, Path=SelectedItem.Price, Mode=OneWay}"/>
+        <CheckBox x:Name="ckbVegetarian" Content="Vegetarian" HorizontalAlignment="Left" Margin="190,156,0,0" VerticalAlignment="Top" IsChecked="{Binding ElementName=lbxDishes, Path=SelectedItem.Vegetarian, Mode=OneWay}"/>
+        <Label x:Name="lblNewDescription" Content="Description" HorizontalAlignment="Left" Margin="352,29,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNewDescription" HorizontalAlignment="Left" Height="23" Margin="352,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="lblNewPrice" Content="Price, (pence)" HorizontalAlignment="Left" Margin="352,90,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNewPrice" HorizontalAlignment="Left" Height="23" Margin="352,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <CheckBox x:Name="ckbNewVegetarian" Content="Vegetarian" HorizontalAlignment="Left" Margin="352,159,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblAdd" Content="Add New Menu Item" HorizontalAlignment="Left" Margin="352,3,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lblExisting" Content="Existing Menu Items" HorizontalAlignment="Left" Margin="30,3,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lblQuantity" Content="Quantity ordered:" HorizontalAlignment="Left" Margin="30,160,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblQty" Content="{Binding ElementName=lbxDishes, Path=SelectedItem.Quantity}" HorizontalAlignment="Left" Margin="134,160,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
